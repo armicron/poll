@@ -1,0 +1,17 @@
+*.log
+*.pot
+*.pyc
+*.so
+*.sqlite3
+local_settings.py
+/dist/
+django-polls/
+env/
+
+*.log
+*.pot
+*.pyc
+local_settings.py
+*~
+.directory
+.idea
