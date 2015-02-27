@@ -5,13 +5,15 @@
     <title></title>
 </head>
 <body>
-    <h1>Js libs poll results</h1>
+    <h1>Poll's list</h1>
+    <div id="poll_container"></div>
+    <div id="poll_details"></div>
     <canvas id="poll_result" width="400" height="400"></canvas>
-<script data-main='{% static "js/common" %}' src='{% static "js/lib/require.js" %}'></script>
+<script data-main='{% static "js/poll/poll" %}' src='{% static "js/lib/require.js" %}'></script>
 <script>
-    require(['common'], function(){
-        require(['page/index']);
-    });
+    //require(['common'], function(){
+     //   require(['page/index']);
+    //});
 </script>
 </body>
 </html>
