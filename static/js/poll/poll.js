@@ -6,6 +6,7 @@ requirejs.config({
             'lib/jquery-2.1.3'
         ],
         domReady: 'lib/domReady',
+        text: 'lib/text',
         underscore: 'lib/underscore',
         backbone: 'lib/backbone',
         chart: 'lib/Chart',
