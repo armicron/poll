@@ -1,7 +1,9 @@
 define([
     'jquery', 'underscore', 'backbone', 'views/IndexView',
-    'collections/PollCollection', 'models/Poll', 'views/PollView'
-], function($, _, $B, IndexView, PollCollection, Poll, PollView){
+    'collections/PollCollection', 'models/Poll', 'views/PollView',
+    'models/Result', 'views/StatView'
+], function($, _, $B, IndexView, PollCollection, Poll, PollView,
+            Result, StatView){
     return $B.Router.extend({
         routes: {
             '': 'index',
@@ -35,11 +37,16 @@ define([
                     $('#poll_details').html(pollView.render().el);
                 }
             });
-
-
         },
         stat: function(id) {
             console.log('statistics of the poll');
+            var result = new Result({'id': id});
+            result.fetch({
+                success: function() {
+                    var statView = new StatView({model: result});
+                    statView.render();
+                }
+            });
         },
     });
 });
