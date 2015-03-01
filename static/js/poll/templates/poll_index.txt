@@ -1,0 +1,2 @@
+<a href='#' data-id='poll/<%= id %>'>
+<%= question %></a><i><a href='#' data-id='stat/<%= id %>'>  [stat]</a></i>

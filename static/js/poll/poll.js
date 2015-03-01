@@ -14,6 +14,7 @@ requirejs.config({
         settings: 'poll/components/settings',
         views: 'poll/views',
         models: 'poll/models',
+        templates: 'poll/templates',
         collections: 'poll/collections',
         components: 'poll/components',
 

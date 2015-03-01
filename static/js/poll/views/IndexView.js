@@ -1,10 +1,9 @@
  define([
-    'jquery', 'underscore', 'backbone', 'models/Poll'
- ], function($, _, $B, Poll) {
+     'jquery', 'underscore', 'backbone', 'models/Poll',
+     'text!templates/poll_index.txt'
+ ], function($, _, $B, Poll, poll_index) {
      var QuestionView = $B.View.extend({
-         template: _.template(
-             "<a href='#' data-id='poll/<%= id %>'>\
-             <%= question %></a><i><a href='#' data-id='stat/<%= id %>'>  [stat]</a></i>"),
+         template: _.template(poll_index),
 
          render: function(){
              this.$el.html(this.template(this.model.toJSON()));
