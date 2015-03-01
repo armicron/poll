@@ -1,6 +1,6 @@
 <br>
 <div><%= question %></div>
 <% _.each(choices, function(choice) {%>
-<br><input type='radio' name='choices' data-id='<%= choice.id %>'><%= choice.choice %></input>
+<br><input <% if (is_multiple) { %> type='checkbox' <% } else  { %> type='radio' name='choices' <% } %> data-id='<%= choice.id %>'><%= choice.choice %></input>
 <%}); %>
 <br><br><input type='button' value='Vote'></input>
