@@ -1,6 +1,10 @@
 <br>
-<div><%= question %></div>
-<% _.each(choices, function(choice) {%>
-<br><input <% if (is_multiple) { %> type='checkbox' <% } else  { %> type='radio' name='choices' <% } %> data-id='<%= choice.id %>'><%= choice.choice %></input>
-<%}); %>
-<br><br><input type='button' value='Vote'></input>
+<div class="poll_container">
+  <div clas="poll_header"><%= question %></div>
+  <div class="poll_choices">
+    <% _.each(choices, function(choice) {%>
+    <br><input class="poll_choice" <% if (is_multiple) { %> type='checkbox' <% } else  { %> type='radio' name='choices' <% } %> data-id='<%= choice.id %>'><%= choice.choice %></input>
+    <%}); %>
+  </div>
+    <br><br><input type='button' data-poll-id='<%= id %>' value='Vote'></input>
+</div>
