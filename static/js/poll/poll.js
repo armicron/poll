@@ -5,6 +5,7 @@ requirejs.config({
             '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min',
             'lib/jquery-2.1.3'
         ],
+        cookie: 'lib/jquery.cookie',
         domReady: 'lib/domReady',
         text: 'lib/text',
         underscore: 'lib/underscore',
