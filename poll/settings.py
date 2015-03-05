@@ -66,6 +66,32 @@ DATABASES = {
     }
 }
 
+LOGGING = {
+    'version': 1,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+    },
+    'loggers': {
+        'polls.test': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    }
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
