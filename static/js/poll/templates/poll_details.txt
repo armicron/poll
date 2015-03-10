@@ -2,9 +2,14 @@
 <div class="poll_container">
   <div clas="poll_header"><%= question %></div>
   <div class="poll_choices">
+  <% if (!already_voted) { %>
     <% _.each(choices, function(choice) {%>
     <br><input class="poll_choice" <% if (is_multiple) { %> type='checkbox' <% } else  { %> type='radio' name='choices' <% } %> data-id='<%= choice.id %>'><%= choice.choice %></input>
     <%}); %>
+   <% } else { %>
+   <br>
+   You already voted.
+   <% } %>
   </div>
     <br><br><input type='button' data-poll-id='<%= id %>' value='Vote'></input>
 </div>
