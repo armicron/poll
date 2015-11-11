@@ -8,3 +8,4 @@ After cloning this repo make:
 * pip install -r requirements.dev
 * python manage.py syncdb
 * python manage.py migrate
+* python manage.py runserver
